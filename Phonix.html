@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonix Organic</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url("file:///D:/manpulu-uram--1000x1000.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); /* transparent black */
+            padding: 50px;
+            margin: 100px auto;
+            max-width: 700px;
+            border-radius: 10px;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Phonix Organic</h1>
+        <p>Welcome to our Product WebPage</p>
+
+        <div class="slideshow-container">
+                        <div class="slide">
+                <img src="file:///D:/WhatsApp Image 2025-04-21 at 9.05.10 PM.jpeg" alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="file:///D:/WhatsApp Image 2025-04-21 at 9.01.30 PM.jpeg" alt="Slide 3">
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; font-size: 18px;">
+            📞 To order the product, contact: <br>
+            <strong>9940620920</strong>, <strong>9940620652</strong>
+        </p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
